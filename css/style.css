@@ -36,7 +36,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: var(--background-color);
     box-shadow: 0px 0px 10px #777;
+    z-index: 99;
 }
 
 a {
@@ -107,12 +109,14 @@ nav a:hover {
 
 .container {
     width: 90%;
-    margin: 0rem 0rem 0rem 3rem;
+    margin: 0rem 0rem 6rem 3rem;
     padding: 2rem;
     display: flex;
+    flex-direction: column;
 }
 
 #home {
+    margin: 0 0 0 3rem;
     height: 35rem;
     align-items: center;
     display: grid;
@@ -160,47 +164,56 @@ h1 {
     margin: 0px auto;
     width: 20rem;
     height: 20rem;
-    border: 1px solid;
     border-radius: 50%;
     box-shadow: 0px 0px 25px var(--primary-color);
     cursor: none;
 }
 
-#education {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
+#about {
+    text-align: center;
 }
 
 h2 {
     border-bottom: 3px solid var(--secondary-color);
     padding: 0rem 2rem;
     margin: 0px auto;
+    margin-bottom: 3rem;
 }
 
 #porto {
-    border: 1px solid;
-    flex-direction: column;
     align-items: center;
-    height: 13rem;
+    height: fit-content;
 }
 
 .client-logos {
-    width: 70%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .client-logo {
-    max-width: 3rem;
-    max-height: 3rem;
+    max-height: 7rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 2px 2px 5px #2c3841;
 }
 
+.client-logo img {
+    max-height: 5rem;
+}
+
+.client-logos h3 {
+    margin: 1rem;
+}
 
 .cards {
     display: flex;
     width: fit-content;
-    margin: 3rem auto;
+    margin: 0rem auto;
 }
 
 .card {
@@ -260,9 +273,7 @@ h2 {
 #contact {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
-    column-gap: 1rem;
-    row-gap: 2.25rem;
+    grid-template-rows: 1fr 2fr;
 }
 
 #contact h2 {
@@ -273,16 +284,14 @@ h2 {
 .socmed {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 1rem 0rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;    
 }
 
 .socmed-group {
     border: 2px solid var(--primary-color);
     border-radius: 0.75rem;
-    display: flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -304,3 +313,13 @@ h2 {
     color: var(--secondary-color);
 }
 
+footer {
+    z-index: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #0C1821;
+    box-shadow: 0px -3px 5px #647683;
+}

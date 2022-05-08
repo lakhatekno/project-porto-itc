@@ -116,6 +116,7 @@ nav a:hover {
 
 .container {
     margin: 0 auto;
+    border: 1px solid;
     width: 100%;
     padding: 2rem;
     display: flex;
